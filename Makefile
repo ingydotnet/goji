@@ -30,4 +30,4 @@ test:
 
 # Remove all the build artifacts:
 clean:
-	git clean -dxf
+	rm -fr bin src pkg json
