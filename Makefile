@@ -1,15 +1,14 @@
 export GOPATH := $(PWD)
-export GOBIN := $(PWD)/bin
 
-GO_MAIN_NAME := ./json.go
+GO_MAIN_NAME := ./lib/json.go
 
 default: build
 
-get:
-	go get ./...
+build: get
+	go install $(GO_MAIN_NAME)
 
-build install: get
-	go $@ $(GO_MAIN_NAME)
+get:
+	go get -d ./lib/...
 
 clean:
 	rm -fr json bin pkg src

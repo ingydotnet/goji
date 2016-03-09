@@ -7,24 +7,26 @@ goji samples
 
 ```
 export GOPATH=$PWD
-export GOBIN=$GOPATH/bin
-go get ./lib/...
+go get -d ./lib/...
 go install lib/json.go
 ```
 
 # How to Build and Install with Makefile
 
+* `make` -- Builds ./bin/json
+
+You can use these targets too:
+
 * `make build`
-* `make install`
 * `make get`
 * `make clean`
 
-# goji json sample
+# How to Run the goji program
 
 Run server:
 
 ```
-$ go run json.go
+./bin/json
 ```
 
 Request to the server:
