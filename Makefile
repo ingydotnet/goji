@@ -1,4 +1,5 @@
 export GOPATH := $(PWD)
+export GOBIN := $(GOPATH)/bin
 
 GO_MAIN_NAME := ./lib/json.go
 
