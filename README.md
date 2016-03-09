@@ -3,7 +3,16 @@ goji
 
 goji samples
 
-# Makefile
+# How to Build and Install by Hand
+
+```
+export GOPATH=$PWD
+export GOBIN=$GOPATH/bin
+go get ./lib/...
+go install lib/json.go
+```
+
+# How to Build and Install with Makefile
 
 * `make build`
 * `make install`
