@@ -18,4 +18,4 @@ get:
 
 # Remove all the build artifacts:
 clean:
-	rm -fr json bin pkg src
+	git clean -dxf
