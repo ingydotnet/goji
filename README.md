@@ -1,39 +1,37 @@
 goji
 ====
 
-goji samples
+goji -- sample Go program
 
 # Overview
 
 The point of this repository is to show the simplest possible example of a Go
 program (with external dependencies) that builds and installs completely
-within the cloned directory. In other words, just clone and build, with no
-fuss:
+within the cloned directory. Just clone, build, test with no fuss:
 
     git clone https://github.com/ingydotnet/goji
-    cd goji
-    make
-    ./bin/json
-    cd ..
+    (cd goji; make install test)
     rm -fr goji
 
-Everything happened inside the `goji` directory. No artifacts were left around
-after deletion.
+Everything happened inside the `goji` directory. No GOPATH setup was required.
+No artifacts were left around afterwards.
 
 This program was originally forked from:
 https://github.com/golang-samples/goji
 
-# How to Build and Install with Makefile
+# How to build and install with Makefile
 
-* `make` -- Builds `./bin/json`. That's all.
+* `make` -- Builds `./bin/json`.
 
 You can use these targets too:
 
+* `make install`
 * `make build`
+* `make test`
 * `make get`
 * `make clean`
 
-# How to Build and Install by Hand
+# How to build and install by hand
 
 ```
 export GOPATH=$PWD
@@ -42,9 +40,9 @@ go get -d ./lib/...
 go install lib/json.go
 ```
 
-# How to Run the goji program
+# How to run/test the goji program
 
-Run server:
+Run the server:
 
 ```
 ./bin/json
